@@ -1,0 +1,14 @@
+
+#intemediates python files
+*.pyc
+*.swp
+
+#OS Files 
+.DS_Store
+.DS_Store?
+
+#Procfile
+Procfile
+
+
+

@@ -1,0 +1,68 @@
+{% load staticfiles %}
+{% load static %}
+ 	<div class="row row-coaches-list">
+		<div class="col-md-12" style="text-align: center">
+			{% verbatim %}
+			<uib-pager total-items="filtered_coaches.length" ng-model="currentPage" items-per-page="pageSize" previous-text="Atras"  next-text="Siguente"></uib-pager>
+			{% endverbatim %}
+		</div>
+	</div>
+<div class="row row-coaches-list" style="height: 850px;">
+	{% verbatim %}
+	<!-- Done for Pagination purposes only -->
+	<div ng-hide="true" id="coaches_length">{{filtered_coaches = (coaches | myfilter:languages:modes:cash_submodes:sub_modes_2:sng_submodes:mtt_submodes:software)}}</div>
+ {% endverbatim %}
+ <!-- Pagination purposes only -->
+	<div ng-repeat="coach in coaches | myfilter:languages:modes:cash_submodes:sub_modes_2:sng_submodes:mtt_submodes:software | startFrom:(currentPage - 1) * pageSize | limitTo:pageSize ">
+
+		<div class="col-md-4 col-sm-6" style="text-align: center">
+			<div class="col-md-12 coach-card">
+				{% verbatim %}
+				<img src="{{coach.image}}" class="img-responsive coach-image" alt="">
+				<div class="product-body">
+			    <h3 class="card-label" style="font-size:16px;font-weight: 600">{{coach.first_name}} {{coach.last_name}}</h3>
+			    <div class="product-rating">
+			    	<span class="card-label">Rating: </span>
+			        <i ng-if="coach.rating >= 1" class="fa fa-star"></i>
+			        <i ng-if="coach.rating >= 2" class="fa fa-star"></i>
+			        <i ng-if="coach.rating >= 3" class="fa fa-star"></i>
+			        <i ng-if="coach.rating >= 4" class="fa fa-star"></i>
+			        <i ng-if="coach.rating >= 5" class="fa fa-star"></i>
+
+			        <i ng-if="coach.rating < 5" class="fa fa-star-o"></i>
+			        <i ng-if="coach.rating < 4" class="fa fa-star-o"></i>
+			        <i ng-if="coach.rating < 3" class="fa fa-star-o"></i>
+			        <i ng-if="coach.rating < 2" class="fa fa-star-o"></i>
+			        <i ng-if="coach.rating < 1" class="fa fa-star-o"></i>
+			    </div>
+				{% endverbatim %}
+			    <div class="product-rating" >
+			    	<span class="card-label">Idiomas: </span>
+		    		<img class="flag" ng-if="coach.english" src="{% static 'icons/UnitedKingsom.png' %}">
+		    		<img class="flag" ng-if="coach.spanish" class="flag" src="{% static 'icons/Spain.png' %}">
+					<img class="flag" ng-if="coach.french" src="{% static 'icons/France.png' %}">
+					<img class="flag" ng-if="coach.russian" src="{% static 'icons/Russia.png' %}">
+			    </div>
+			    {% verbatim %}
+			    <span class="price">
+			    	<span class="card-label">Precio/Hora: </span>
+			        <span class="amount">{{coach.price_per_hour}}€</span>
+			    </span>
+			    {% endverbatim %}
+			    <div class="buttons">
+			        <a href="" class="btn btn-danger btn-sm add-to-cart btn-block">Ver Perfil</a>
+			    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row row-coaches-list">
+	<div class="col-md-12" style="text-align: center">
+		{% verbatim %}
+		<uib-pager total-items="filtered_coaches.length" ng-model="currentPage" items-per-page="pageSize" previous-text="Atras"  next-text="Siguente"></uib-pager>
+		{% endverbatim %}
+	</div>
+</div>
+
+

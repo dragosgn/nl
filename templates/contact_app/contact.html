@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container">
+	<h1 style="padding:20px"></h1>
+</div>
+<section>
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-6">
+				<div class="footer-widget footer-widget-contacts">
+					<h4>{{ title }}</h4>
+				</div>
+				<form id='contacto' method='POST' action=''>{% csrf_token %}
+				{{ form|crispy }}
+				<div class="buttonHolder">
+					<input type='submit' onsubmit="return false" value='Enviar' class="btn btn-primary" />
+				</div>
+				</form>
+			</div>
+
+			<div class="col-md-6">
+
+				<div class="container">
+					<h1 style="padding:5px"></h1>
+				</div>
+
+				<div class="footer-widget footer-widget-contacts">
+			        <ul class="list-unstyled">
+			            <li><i class="fa fa-envelope"></i> help@pcoaches.com</li>
+			            <li><i class="fa fa-phone"></i> 754 213 456</li>
+			            <!--<li><i class="fa fa-map-marker"></i> 40°44'00.9"N 73°59'43.4"W</li>-->
+			            <li class="social">
+			                <a href="#"><i class="fa fa-facebook"></i></a>
+			                <a href="#"><i class="fa fa-twitter"></i></a>
+			                <a href="#"><i class="fa fa-instagram"></i></a>
+			                <a href="#"><i class="fa fa-linkedin"></i></a>
+			                <a href="#"><i class="fa fa-tumblr"></i></a>
+			            </li>
+			        </ul>
+			        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.4820895887474!2d-3.6790778843225067!3d40.42032277936468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228a46df4f1cb%3A0x20c0c0ca3aefd31b!2sCalle+Dr.+Castelo%2C+20%2C+28009+Madrid!5e0!3m2!1ses!2ses!4v1452107018263" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+			    </div>
+			</div>
+		</div>
+	</div>
+</section>
+<div class="container">
+	<h1 style="padding:20px"></h1>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" >
+    $(document).ready(function(){
+        $("#id_person_email").attr('placeholder', 'poker@poker.com');
+    });
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
+<script src="http://malsup.github.com/jquery.form.js"></script> 
+ 
+<script> 
+    // wait for the DOM to be loaded 
+    $(document).ready(function() { 
+        // bind 'myForm' and provide a simple callback function 
+        $('#contacto').ajaxForm(function() { 
+            alert("Gracias por tu mensaje!"); 
+        }); 
+    }); 
+</script>
+
+{% endblock content %}

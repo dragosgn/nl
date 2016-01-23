@@ -1,0 +1,194 @@
+<!-- WIDGET:Filter - START -->
+{% load staticfiles %}
+{% load static %}
+<div class="sider-filter">
+
+    <div class="row row-filter">
+        <div class="col-md-12 banner-filter ">
+            <h3 class="label-filter">MODALIDAD:</h3>  
+        </div>
+    </div>
+
+    <div class="widget widget-checkbox" style="padding-top: 5px">
+        <div class="row">
+            <div class="col-md-2">
+                <button class= "btn btn-danger btn-block" ng-click="swich_cash()"> Cash </button>
+            </div>
+            <div class="col-md-2">
+                 <button class= "btn btn-danger btn-block" ng-click="swich_sng()"> Sit And Go</button>
+            </div>
+            <div class="col-md-2">
+                <button class= "btn btn-danger btn-block" ng-click="swich_mtt()"> MTT</button>
+            </div>
+            <div class="col-md-2">
+                <button class= "btn btn-danger btn-block" ng-click="swich_software()"> Software </button>
+            </div>
+            <div class="col-md-2">
+                <button class= "btn btn-danger btn-block" ng-click="swich_all()"> Todos </button>
+            </div>
+        </div>
+
+        <div class="row row-filter" ng-if="ModeSelected(modes)" style="padding-top: 5px">
+            <div class="col-md-12 banner-filter">
+                <h4 class="label-filter">Sub-Modos de Juego</h4>
+            </div>
+        </div>
+        <!-- Sub modalidades de Juego: CASH -->
+        <div class="row row-filter" ng-if="modes.cash">
+            <div class="col-md-2 col-filter">
+                <div class="checkbox">  
+                    <input id="nl_deep_stack" type="checkbox" data-ng-model='cash_submodes.nl_deep_stack'>
+                    <label for="nl_deep_stack">NL Deep Stack</label>
+                    <!--span>[12]</span--> 
+                </div>
+            </div>
+            <div class="col-md-2 col-filter">
+                <div class="checkbox">  
+                    <input id="nl_multistack" type="checkbox" data-ng-model='cash_submodes.nl_multistack'>
+                    <label for="nl_multistack">NL Multistack</label>
+                    <!--span>[12]</span--> 
+                </div>
+            </div>
+            <div class="col-md-2 col-filter">
+                <div class="checkbox">  
+                    <input id="nl_cap" type="checkbox" data-ng-model='cash_submodes.nl_cap'>
+                    <label for="nl_cap">NL CAP</label>
+                    <!--span>[12]</span--> 
+                </div>
+            </div>
+            <div class="col-md-2 col-filter">
+                <div class="checkbox">  
+                    <input id="plo_deep_stack" type="checkbox" data-ng-model='cash_submodes.plo_deepstack'>
+                    <label for="plo_deep_stack">PLO Deep Stack</label>
+                    <!--span>[12]</span--> 
+                </div>
+            </div>
+            <div class="col-md-2 col-filter">
+                <div class="checkbox">  
+                    <input id="plo_multistack" type="checkbox" data-ng-model='cash_submodes.plo_multistack'>
+                    <label for="plo_multistack">PLO MultiStack</label>
+                    <!--span>[12]</span--> 
+                </div>
+            </div>
+            <div class="col-md-2 col-filter">
+                <div class="checkbox">  
+                    <input id="plo_hu" type="checkbox" data-ng-model='cash_submodes.plo_hu'>
+                    <label for="plo_hu">PLO Heads Up</label>
+                    <!--span>[12]</span--> 
+                </div>
+            </div>
+        </div>
+
+        <!-- Sub modalidades de Juego: SNG -->
+        <div class="row row-filter" ng-if="modes.sng">
+            <div class="col-md-2 col-filter">
+                <div class="checkbox">  
+                    <input id="sng_normal" type="checkbox" data-ng-model='sng_submodes.normal'>
+                    <label for="sng_normal">SNG Normal</label>
+                    <!--span>[12]</span--> 
+                </div>
+            </div>
+            <div class="col-md-2 col-filter">
+                <div class="checkbox">  
+                    <input id="sng_turbo" type="checkbox" data-ng-model='sng_submodes.turbo'>
+                    <label for="sng_turbo">SNG Turbo</label>
+                    <!--span>[12]</span--> 
+                </div>
+            </div>
+            <div class="col-md-2 col-filter">
+                <div class="checkbox">  
+                    <input id="sng_hyperturbo"type="checkbox" data-ng-model='sng_submodes.hyperturbo'>
+                    <label for="sng_hyperturbo">SNG HyperTurbo</label>
+                    <!--span>[12]</span--> 
+                </div>
+            </div>
+            <div class="col-md-2 col-filter">
+                <div class="checkbox">  
+                    <input id="sng_spin_and_go" type="checkbox" data-ng-model='sng_submodes.spin_and_go'>
+                    <label for="sng_spin_and_go" >SNG Spin And Go</label>
+                    <!--span>[12]</span--> 
+                </div>
+            </div>
+        </div> 
+        <!-- END Submode: SNG -->        
+
+        <!-- Sub modalidades de Juego: MTT -->
+        <div class="row row-filter" ng-if="modes.mtt">
+            <div class="col-md-2 col-filter">
+                <div class="checkbox">  
+                    <input id="mtt_normal" type="checkbox" data-ng-model='mtt_submodes.normal'>
+                    <label for="mtt_normal">MTT Normal</label>
+                    <!--span>[12]</span--> 
+                </div>
+            </div>
+            <div class="col-md-2 col-filter">
+                <div class="checkbox">  
+                    <input id="mtt_sng" type="checkbox" data-ng-model='mtt_submodes.sng'>
+                    <label for="mtt_sng">MTT Sit And Go</label>
+                    <!--span>[12]</span--> 
+                </div>
+            </div>
+            <div class="col-md-2 col-filter">
+                <div class="checkbox">  
+                    <input id="mtt_satelite"type="checkbox" data-ng-model='mtt_submodes.satelite'>
+                    <label for="mtt_satelite">MTT Satelite</label>
+                    <!--span>[12]</span--> 
+                </div>
+            </div>
+        </div> 
+        <!-- END Submode: MTT -->    
+
+        <!-- Sub modalidades de Juego: SOFTWARE -->
+        <div class="row row-filter" ng-if="modes.software" style="margin-top: 5px;">
+            <div class="col-md-12 banner-filter">
+                <h4 class="label-filter">Software</h4>
+            </div>
+            <div class="col-md-2 col-filter">
+                <div class="checkbox">  
+                    <input id="snowie" type="checkbox" data-ng-model='software.snowie'>
+                    <label for="snowie"> Snowie </label>
+                    <!--span>[12]</span--> 
+                </div>
+            </div>
+            <div class="col-md-2 col-filter">
+                <div class="checkbox">  
+                    <input id="hold_them_manager" type="checkbox" data-ng-model='software.hold_them_manager'>
+                    <label for="hold_them_manager">Hold Them Manager</label>
+                    <!--span>[12]</span--> 
+                </div>
+            </div>
+            <div class="col-md-2 col-filter">
+                <div class="checkbox">  
+                    <input id="cr_ev"type="checkbox" data-ng-model='software.cr_ev'>
+                    <label for="cr_ev">CR EV</label>
+                    <!--span>[12]</span--> 
+                </div>
+            </div>
+            <div class="col-md-2 col-filter">
+                <div class="checkbox">  
+                    <input id="flopzilla" type="checkbox" data-ng-model='software.flopzilla'>
+                    <label for="flopzilla">FlopZilla</label>
+                    <!--span>[12]</span--> 
+                </div>
+            </div>
+            <div class="col-md-2 col-filter">
+                <div class="checkbox">  
+                    <input id="p_simple" type="checkbox" data-ng-model='software.posolver_simple'>
+                    <label for="p_simple">Posolver Simple</label>
+                    <!--span>[12]</span--> 
+                </div>
+            </div>
+            <div class="col-md-2 col-filter">
+                <div class="checkbox">  
+                    <input id="ht_res"type="checkbox" data-ng-model='software.hold_them_resources'>
+                    <label for="ht_res">HT Resources</label>
+                    <!--span>[12]</span--> 
+                </div>
+            </div>
+        </div> 
+
+
+        </div>
+        <!-- END Submode: SOFTWARE --> 
+    </div><!-- End of filter Widget -->
+</div>
