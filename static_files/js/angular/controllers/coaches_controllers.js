@@ -12,7 +12,7 @@ coachApp.controller('CoachFilterController',['$scope', '$routeParams', '$http',
   $scope.pageSize = 6;
   $scope.currentPage = 1;
 	//Languages
-	$scope.languages = {english: false, french:false, spanish: false, russian: false};
+	$scope.languages = {english: true, french: true, spanish: true, russian: true};
 
 	//Game Modes
 	$scope.modes = {cash: true, sng: true, mtt: true, software: true};
