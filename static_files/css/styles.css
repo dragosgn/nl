@@ -5824,3 +5824,12 @@ header.navbar-transparent.navbar-offset {
 	margin-bottom: 2px;
 }
 
+.btn-block{
+	background-color: #373737;
+	border-color: #373737; 
+}
+
+.btn-block:hover{
+	background-color: #E41E26;
+	border-color: #E41E26; 
+}
