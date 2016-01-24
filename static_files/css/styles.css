@@ -5856,3 +5856,8 @@ header.navbar-transparent .navbar-brand:hover {
 header.navbar-transparent .navbar-nav > li > a:hover {
 	color:#95865E;
 }
+
+.categories .category:hover .category-mask {
+	opacity:0.4;
+	color:#95865E;
+}
