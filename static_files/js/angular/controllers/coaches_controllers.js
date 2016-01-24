@@ -3,20 +3,20 @@
 coachApp.controller('CoachFilterController',['$scope', '$routeParams', '$http',
 	function($scope, $routeParams, $http) {
 		$http.get('http://127.0.0.1:8000/api/coaches_api/?format=json')
-			.success( 
+			.success(
 				function(data){
 					$scope.coaches = data;
           $scope.totalItems = $scope.coaches.length;
 				});
-		
+
   $scope.pageSize = 6;
   $scope.currentPage = 1;
 	//Languages
-	$scope.languages = {english: false, french:false, spanish: false, russian: false};
+	$scope.languages = {english: true, french: true, spanish: true, russian: true};
 
 	//Game Modes
 	$scope.modes = {cash: true, sng: true, mtt: true, software: true};
-	
+
 	$scope.ModeSelected = function(modes){
 		var any_selected = false;
 		any_selected = modes.cash || modes.sng || modes.mtt;
@@ -81,13 +81,9 @@ coachApp.controller('CoachFilterController',['$scope', '$routeParams', '$http',
 coachApp.controller('CoachListController',['$scope', '$routeParams', '$http',
   function($scope, $routeParams, $http) {
     $http.get('http://localhost:8000/api/coaches_api/?format=json')
-      .success( 
+      .success(
         function(data){
           $scope.coaches = data;
         });
       }
 ]);
-
-
-
-

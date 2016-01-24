@@ -7,82 +7,86 @@
 		<img class="banner" src="{% static 'images/cards_filter.jpg' %}"/>
 	</div>
 	<div class="container container-filter" >
-		<div class="row" ng-controller = "CoachFilterController">
-			<div class="col-md-2 sider-filter" style="border-width: 0px;background-color: #EDCB8A;">
-				<div class="row">
-					<div class="widget widget-checkbox">
-		            	<div class="col-md-12 banner-filter">
-							<h4 class="label-filter">Idiomas</h4>
-						</div>
-		                <div class="col-md-12">
-		                    <div class="widget-body">
-								<div class="checkbox">
-			                        <input id="spanish" type="checkbox" data-ng-model='languages.spanish'>
-			                        <label for="spanish">Español</label>
-			                        <!--span>[12]</span-->
-			                    </div>
-			                    <div class="checkbox">
-			                        <input id="english" type="checkbox" data-ng-model='languages.english'>
-			                        <label for="english">Inglés</label>
-			                        <!--span>[12]</span-->
-			                    </div>
-			                    <div class="checkbox">
-			                        <input id="french" type="checkbox" data-ng-model='languages.french'>
-			                        <label for="french">Francés</label>
-			                        <!--span>[12]</span-->
-			                    </div>
-			                    <div class="checkbox">
-			                        <input id="russian" type="checkbox" data-ng-model='languages.russian'>
-			                        <label for="russian">Ruso</label>
-			                        <!--span>[12]</span-->
-			                    </div>
-	                    	</div>
-	                	</div>
-	            	</div>
-				</div>
-				<div class="row" ng-if="ModeSelected(modes)">
-					<div class="widget widget-checkbox">
-			            <div class="col-md-12 banner-filter">
-							<h4 class="label-filter">Número de jugadores</h4>
-						</div>
-		                <div class="col-md-12">
-		                	<div class="widget-body">
-								<div class="checkbox">
-					                <input id="fr" type="checkbox" data-ng-model='sub_modes_2.full_ring'>
-					                <label for="fr">Full Ring</label>
-					                <!--span>[12]</span-->
-					            </div>
-					            <div class="checkbox">
-					                <input id="s_max" type="checkbox" data-ng-model='sub_modes_2.six_max'>
-					                <label for="s_max">Six Max</label>
-					                <!--span>[12]</span-->
-					            </div>
-					            <div class="checkbox">
-					                <input id="hu" type="checkbox" data-ng-model='sub_modes_2.heads_up'>
-					                <label for="hu">Heads Up</label>
-					                <!--span>[12]</span-->
-					            </div>
-					        </div>
-	                    </div>
-
-	            	</div>
-				</div>
-
-			</div>
-		<!-- Sub modalidades^2 de Juego -->
-
-			<div class="col-md-10" style="padding-left: 30px;">
+		<div class="row" ng-controller = "CoachFilterController" >
+			<div class="col-md-10" style="padding-right: 30px;">
 				<div class="row">
 					{% include 'coach_filter.html' %}
 					{% include 'coach_list_block.html' %}
 				</div>
-
-
-
 			</div>
+			<div class="col-md-2" >
+				<div class="row">
+					<div class="panel panel-filter">
+						<div class="panel-heading panel-label">Idiomas</div>
+						  <div class="panel-body">
+							  <table>
+							  	<tr class="filter-row">
+							  		<div class="checkbox filter-checkbox">
+				                        <input id="spanish" type="checkbox" data-ng-model='languages.spanish'>
+				                        <label for="spanish">Español</label>
+				                        <!--span>[12]</span-->
+				                    </div>
+							  	</tr >
+							  	<tr class="filter-row">
+				                    <div class="checkbox filter-checkbox">
+				                        <input id="english" type="checkbox" data-ng-model='languages.english'>
+				                        <label for="english">Inglés</label>
+				                        <!--span>[12]</span-->
+				                    </div>
+							  	</tr >
+							  	<tr class="filter-row">
+				                    <div class="checkbox filter-checkbox">
+				                        <input id="french" type="checkbox" data-ng-model='languages.french'>
+				                        <label for="french">Francés</label>
+				                        <!--span>[12]</span-->
+				                    </div>
+							  	</tr>
+							  	<tr class="filter-row filter-checkbox">
+				                    <div class="checkbox">
+				                        <input id="russian" type="checkbox" data-ng-model='languages.russian'>
+				                        <label for="russian">Ruso</label>
+				                        <!--span>[12]</span-->
+				                    </div>
+							  	</tr>
+							  </table>
+						  </div>
+					</div>
+				</div>
+
+				<div class="row" ng-if="ModeSelected(modes)">
+					<div class="panel panel-filter">
+						<div class="panel-heading panel-label">Número de jugadores</div>
+						  <div class="panel-body">
+							  <table>
+							  	<tr class="filter-row">
+									<div class="checkbox filter-checkbox">
+						                <input id="fr" type="checkbox" data-ng-model='sub_modes_2.full_ring'>
+						                <label for="fr">Full Ring</label>
+						                <!--span>[12]</span-->
+						            </div>
+							  	</tr>
+							  	<tr>
+						            <div class="checkbox filter-checkbox">
+						                <input id="s_max" type="checkbox" data-ng-model='sub_modes_2.six_max'>
+						                <label for="s_max">Six Max</label>
+						                <!--span>[12]</span-->
+						            </div>
+							  	</tr>
+							  	<tr>
+						            <div class="checkbox filter-checkbox">
+						                <input id="hu" type="checkbox" data-ng-model='sub_modes_2.heads_up'>
+						                <label for="hu">Heads Up</label>
+						                <!--span>[12]</span-->
+						            </div>
+							  	</tr>
+							  </table>
+						  </div>
+					</div>
+				</div>
+			</div>
+		<!-- Sub modalidades^2 de Juego -->
 
 		</div>
-
 	</div>
 	<div class="row row-no-padding" >
 		<img class="banner" src="{% static 'images/card_filter_2.jpg' %}"/>
