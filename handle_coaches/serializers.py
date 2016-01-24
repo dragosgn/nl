@@ -6,7 +6,8 @@ class CoachSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Coach
-        fields = ('first_name', 
+        fields = ('id',
+            'first_name', 
             'last_name',
             'email',
             'skype',

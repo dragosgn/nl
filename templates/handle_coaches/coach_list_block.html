@@ -20,43 +20,48 @@
 				{% verbatim %}
 				<img src="{{coach.image}}" class="img-responsive coach-image" alt="">
 				<div class="product-body">
-			    <h3 class="card-label" style="font-size:16px;font-weight: 600">{{coach.first_name}} {{coach.last_name}}</h3>
-			    <div class="product-rating">
-			    	<span class="card-label">Rating: </span>
-			        <i ng-if="coach.rating >= 1" class="fa fa-star"></i>
-			        <i ng-if="coach.rating >= 2" class="fa fa-star"></i>
-			        <i ng-if="coach.rating >= 3" class="fa fa-star"></i>
-			        <i ng-if="coach.rating >= 4" class="fa fa-star"></i>
-			        <i ng-if="coach.rating >= 5" class="fa fa-star"></i>
 
-			        <i ng-if="coach.rating < 5" class="fa fa-star-o"></i>
-			        <i ng-if="coach.rating < 4" class="fa fa-star-o"></i>
-			        <i ng-if="coach.rating < 3" class="fa fa-star-o"></i>
-			        <i ng-if="coach.rating < 2" class="fa fa-star-o"></i>
-			        <i ng-if="coach.rating < 1" class="fa fa-star-o"></i>
-			    </div>
-				{% endverbatim %}
-			    <div class="product-rating" >
-			    	<span class="card-label">Idiomas: </span>
-		    		<img class="flag" ng-if="coach.english" src="{% static 'icons/UnitedKingsom.png' %}">
-		    		<img class="flag" ng-if="coach.spanish" class="flag" src="{% static 'icons/Spain.png' %}">
-					<img class="flag" ng-if="coach.french" src="{% static 'icons/France.png' %}">
-					<img class="flag" ng-if="coach.russian" src="{% static 'icons/Russia.png' %}">
-			    </div>
-			    {% verbatim %}
-			    <span class="price">
-			    	<span class="card-label">Precio/Hora: </span>
-			        <span class="amount">{{coach.price_per_hour}}€</span>
-			    </span>
-			    {% endverbatim %}
+				<table class="table table-hover">
+					<tr>
+					  <td class="active" style="text-align: left">{{coach.first_name}} {{coach.last_name}}</td>
+					  <td class="active" >
+				        <i ng-if="coach.rating >= 1" class="fa fa-star" style="float: right"> </i>
+				        <i ng-if="coach.rating >= 2" class="fa fa-star" style="float: right"></i>
+				        <i ng-if="coach.rating >= 3" class="fa fa-star" style="float: right"></i>
+				        <i ng-if="coach.rating >= 4" class="fa fa-star" style="float: right"></i>
+				        <i ng-if="coach.rating >= 5" class="fa fa-star" style="float: right"></i>
+				        <i ng-if="coach.rating < 5" class="fa fa-star-o" style="float: right"></i>
+				        <i ng-if="coach.rating < 4" class="fa fa-star-o" style="float: right"></i>
+				        <i ng-if="coach.rating < 3" class="fa fa-star-o" style="float: right"></i>
+				        <i ng-if="coach.rating < 2" class="fa fa-star-o" style="float: right"></i>
+				        <i ng-if="coach.rating < 1" class="fa fa-star-o" style="float: right"></i>
+			    	</td>
+					</tr>
+					{% endverbatim %}
+					<tr>
+					  <td class="active" style="text-align: left">Idiomas:</td>
+					  <td class="active" style="text-align: right">
+					  	<img class="flag" ng-if="coach.english" src="{% static 'icons/UnitedKingsom.png' %}">
+			    		<img class="flag" ng-if="coach.spanish" src="{% static 'icons/Spain.png' %}">
+						<img class="flag" ng-if="coach.french" src="{% static 'icons/France.png' %}">
+						<img class="flag" ng-if="coach.russian" src="{% static 'icons/Russia.png' %}">
+					  </td>
+					</tr>
+					{% verbatim %}
+					<tr>
+					  <td class="active" style="text-align: left">Precio/Hora:</td>
+					  <td class="active" style="text-align: right">{{coach.price_per_hour}}€</td>
+					</tr>
+				</table>
+			    
 			    <div class="buttons">
-			        <a href="" class="btn btn-danger btn-sm add-to-cart btn-block">Ver Perfil</a>
+			        <a ng-href="localhost:8000/coacheslist/{{coach.id}}" class="btn btn-danger btn-sm add-to-cart btn-block">Ver Perfil</a>
 			    </div>
+			    {% endverbatim %}
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 <div class="row row-coaches-list">
 	<div class="col-md-12" style="text-align: center">
 		{% verbatim %}

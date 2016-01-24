@@ -3,36 +3,49 @@
 {% load static %}
 <div class="sider-filter">
 
-    <div class="row row-filter">
-        <div class="col-md-12 banner-filter ">
-            <h3 class="label-filter">MODALIDAD:</h3>  
-        </div>
+
+
+
+    <div class="panel panel-info">
+      <!-- Default panel contents -->
+      <div class="panel-heading"><strong>Modalidad</strong></div>
+
+      <!-- Table -->
+      <table class="table">
+        <tr>
+            <td><button class= "btn btn-danger btn-block" ng-click="swich_cash()"> Cash </button></td>
+            <td><button class= "btn btn-danger btn-block" ng-click="swich_sng()"> Sit And Go</button></td>
+            <td><button class= "btn btn-danger btn-block" ng-click="swich_mtt()"> MTT</button></td>
+            <td><button class= "btn btn-danger btn-block" ng-click="swich_software()"> Software </button></td>
+            <td><button class= "btn btn-danger btn-block" ng-click="swich_all()"> Todos </button></td>
+        </tr>
+      </table>
     </div>
 
-    <div class="widget widget-checkbox" style="padding-top: 5px">
-        <div class="row">
-            <div class="col-md-2">
-                <button class= "btn btn-danger btn-block" ng-click="swich_cash()"> Cash </button>
-            </div>
-            <div class="col-md-2">
-                 <button class= "btn btn-danger btn-block" ng-click="swich_sng()"> Sit And Go</button>
-            </div>
-            <div class="col-md-2">
-                <button class= "btn btn-danger btn-block" ng-click="swich_mtt()"> MTT</button>
-            </div>
-            <div class="col-md-2">
-                <button class= "btn btn-danger btn-block" ng-click="swich_software()"> Software </button>
-            </div>
-            <div class="col-md-2">
-                <button class= "btn btn-danger btn-block" ng-click="swich_all()"> Todos </button>
-            </div>
-        </div>
+     <div class="panel panel-info" ng-if="ModeSelected(modes)">
+      <!-- Default panel contents -->
+      <div class="panel-heading" ><strong>Sub-Modalidad</strong></div>
 
-        <div class="row row-filter" ng-if="ModeSelected(modes)" style="padding-top: 5px">
-            <div class="col-md-12 banner-filter">
-                <h4 class="label-filter">Sub-Modos de Juego</h4>
-            </div>
-        </div>
+      <!-- Table -->
+      <table class="table">
+        <tr>
+            <td>
+                <div class="checkbox">  
+                    <input id="nl_deep_stack" type="checkbox" data-ng-model='cash_submodes.nl_deep_stack'>
+                    <label for="nl_deep_stack">NL Deep Stack</label>
+                    <!--span>[12]</span--> 
+                </div>
+            </td>
+            <td><button class= "btn btn-danger btn-block" ng-click="swich_sng()"> Sit And Go</button></td>
+            <td><button class= "btn btn-danger btn-block" ng-click="swich_mtt()"> MTT</button></td>
+            <td><button class= "btn btn-danger btn-block" ng-click="swich_software()"> Software </button></td>
+            <td><button class= "btn btn-danger btn-block" ng-click="swich_all()"> Todos </button></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="row row-filter">
+
         <!-- Sub modalidades de Juego: CASH -->
         <div class="row row-filter" ng-if="modes.cash">
             <div class="col-md-2 col-filter">
