@@ -3,8 +3,6 @@
 {% load static %}
 {% load smart_if %}
 {% block content %}
-
-
 	<!-- Un div para que no hay conflictos -->
 
 	<div class="container">
@@ -12,9 +10,9 @@
 	</div>
 
     <!-- ==========================
-    	BREADCRUMB - START 
+    	BREADCRUMB - START
     =========================== -->
-    
+
     <section class="breadcrumb-wrapper">
         <div class="container">
             <div class="row">
@@ -34,11 +32,11 @@
     </section>
 
 	<!-- ==========================
-    	BREADCRUMB - END 
+    	BREADCRUMB - END
     =========================== -->
 
     <!-- ==========================
-    	PRODUCTS - START 
+    	PRODUCTS - START
     =========================== -->
     <section class="content products">
         <div class="container">
@@ -145,11 +143,11 @@
                                         </div>
                                     </div>
                                 	-->
-                                    
+
                                     <div class="col-md-4 col-sm-12">
                                     	<a href="" class="btn btn-primary add-to-cart"><i class="fa fa-shopping-cart"></i>CONTRATAR</a>
                                     </div>
-                                    
+
                                 </div>
 
                             <!-- WISHLIST COMPARE EMAIL
@@ -164,7 +162,7 @@
                     </div>
                 </div>
             </article>
-            
+
             <div class="tabs product-tabs">
                 <ul class="nav nav-tabs" role="tablist">
                 	<li role="presentation" class="active"><a href="#description" role="tab" data-toggle="tab" aria-controls="description" aria-expanded="true">Descripción</a></li>
@@ -184,7 +182,7 @@
                             <!-- Expertise if's -->
 
                             <!-- CASH -->
-                            
+
                             {% if coach.nl_deep_stack_6max or coach.nl_multistack_6max or coach.nl_cap_6max or coach.nl_deep_stack_FR or coach.nl_multistack_FR or coach.nl_cap_FR %}
                             <div class="col-md-3">
                                 <h5>CASH</h5>
@@ -228,10 +226,10 @@
                                 </ul>
                             </div>
                             {% endif %}
-                            
+
 
                             <!-- SNG -->
-                            
+
                             {% if coach.sng_normal_FR or coach.sng_turbo_FR or coach.sng_hyperturbo_FR or coach.sng_normal_6max or coach.sng_turbo_6max or coach.sng_hyperturbo_6max or coach.sng_normal_hu or coach.sng_turbo_hu or coach.sng_hyperturbo_hu or coach.sng_spin_and_go %}
                             <div class="col-md-3">
                                 <h5>SNG</h5>
@@ -271,7 +269,7 @@
                             {% endif %}
 
                             <!-- MTT -->
-                            
+
                             {% if coach.mtt_normal or coach.mtt_sng or coach.satelite %}
                             <div class="col-md-3">
                                 <h5>MTT</h5>
@@ -290,7 +288,7 @@
                             {% endif %}
 
                             <!-- SOFTWARE -->
-                            
+
                             {% if coach.hold_them_manager or coach.snowie or coach.cr_ev or coach.flopzilla or coach.posolver_simple or coach.hold_them_resources %}
                             <div class="col-md-3">
                                 <h5>Software</h5>
@@ -335,7 +333,7 @@
                     <!-- REVIEW CODE -->
                     <!--
                   	<div role="tabpanel" class="tab-pane" id="reviews">
-                    
+
                         <div class="comments">
                         	<div class="media">
                             	<div class="media-left">
@@ -350,8 +348,8 @@
                                 	<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
                               	</div>
                             </div>
-                            
-                            
+
+
                         	<div class="media">
                             	<div class="media-left">
                                 	<img class="media-object" alt="" src="">
@@ -363,7 +361,7 @@
                                         <a data-toggle="modal" data-target="#add-review">Reply</a>
                                     </div>
                                 	<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                                
+
                                     <div class="media">
                                         <div class="media-left">
                                             <img class="media-object" alt="" src="">
@@ -376,7 +374,7 @@
                                             <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="media">
                                         <div class="media-left">
                                             <img class="media-object" alt="" src="">
@@ -389,13 +387,13 @@
                                             <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
                                         </div>
                                     </div>
-                                    
-                                
+
+
                                 </div>
                             </div>
-                            
-                            
-                            
+
+
+
                         	<div class="media">
                             	<div class="media-left">
                                 	<img class="media-object" alt="" src="">
@@ -409,10 +407,10 @@
                                 	<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
                               	</div>
                             </div>
-                            
-                            
+
+
                         </div>
-                        
+
                         <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#add-review">Add Review</a>
 
                   	</div>
@@ -431,8 +429,8 @@
             <div class="releated-products">
             	<h2>COACHES SIMILARES</h2>
             	<div class="row grid" id="products">
-                        
-                    
+
+
                     <div class="col-sm-3 col-xs-6">
                         <article class="product-item">
                             <div class="row">
@@ -464,16 +462,16 @@
                             </div>
                         </article>
                     </div>
-                    
+
             	</div>
             </div>
             -->
         </div>
     </section>
     <!-- ==========================
-    	PRODUCTS - END 
+    	PRODUCTS - END
     =========================== -->
-    
+
     <!-- ==========================
     	ADD REVIEW - START
     =========================== -->
@@ -490,18 +488,18 @@
                         <p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked<span class="required">*</span></p>
                         <div class="row">
                             <div class="form-group comment-form-author col-sm-6">
-                                <label for="author">Name<span class="required">*</span></label> 
+                                <label for="author">Name<span class="required">*</span></label>
                                 <input class="form-control" id="author" name="author" type="text" required value="" placeholder="Enter your name">
                             </div>
                             <div class="form-group comment-form-email col-sm-6">
-                                <label for="email">Email<span class="required">*</span></label> 
+                                <label for="email">Email<span class="required">*</span></label>
                                 <input class="form-control" id="email" name="email" type="email" required value="" placeholder="Enter your email">
                             </div>
                         </div>
                         <div class="form-group comment-form-comment">
                             <label for="comment">Comment<span class="required">*</span></label>
                             <textarea class="form-control" id="comment" name="comment" required placeholder="Enter your message"></textarea>
-                        </div>						
+                        </div>
                         <button class="btn btn-primary" type="submit"><i class="fa fa-check"></i>Submit</button>
                     </form>
                 </div>
@@ -510,12 +508,12 @@
     </div>
 -->
     <!-- ==========================
-    	ADD REVIEW - END 
+    	ADD REVIEW - END
     =========================== -->
 
-     
+
     <!-- ==========================
-    	NEWSLETTER - START 
+    	NEWSLETTER - START
     =========================== -->
     <section class="separator separator-newsletter">
     	<div class="container">
@@ -563,7 +561,7 @@
 
     </script>
     <!-- ==========================
-    	NEWSLETTER - END 
+    	NEWSLETTER - END
     =========================== -->
 
 

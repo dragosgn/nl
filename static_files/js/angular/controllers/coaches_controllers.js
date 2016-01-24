@@ -2,7 +2,7 @@
 
 coachApp.controller('CoachFilterController',['$scope', '$routeParams', '$http',
 	function($scope, $routeParams, $http) {
-		$http.get('http://localhost:8000/api/coaches_api/?format=json')
+		$http.get('http://127.0.0.1:8000/api/coaches_api/?format=json')
 			.success( 
 				function(data){
 					$scope.coaches = data;

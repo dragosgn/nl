@@ -1,9 +1,7 @@
-
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% load static %}
 {% block content %}
-
 
 	<div class="row row-no-padding" >
 		<img class="banner" src="{% static 'images/cards_filter.jpg' %}"/>
@@ -17,26 +15,26 @@
 							<h4 class="label-filter">Idiomas</h4>
 						</div>
 		                <div class="col-md-12">
-		                    <div class="widget-body">                  	
-								<div class="checkbox">  
+		                    <div class="widget-body">
+								<div class="checkbox">
 			                        <input id="spanish" type="checkbox" data-ng-model='languages.spanish'>
 			                        <label for="spanish">Español</label>
-			                        <!--span>[12]</span--> 
+			                        <!--span>[12]</span-->
 			                    </div>
-			                    <div class="checkbox">  
+			                    <div class="checkbox">
 			                        <input id="english" type="checkbox" data-ng-model='languages.english'>
 			                        <label for="english">Inglés</label>
-			                        <!--span>[12]</span--> 
+			                        <!--span>[12]</span-->
 			                    </div>
-			                    <div class="checkbox">  
+			                    <div class="checkbox">
 			                        <input id="french" type="checkbox" data-ng-model='languages.french'>
 			                        <label for="french">Francés</label>
-			                        <!--span>[12]</span--> 
+			                        <!--span>[12]</span-->
 			                    </div>
-			                    <div class="checkbox">  
+			                    <div class="checkbox">
 			                        <input id="russian" type="checkbox" data-ng-model='languages.russian'>
 			                        <label for="russian">Ruso</label>
-			                        <!--span>[12]</span--> 
+			                        <!--span>[12]</span-->
 			                    </div>
 	                    	</div>
 	                	</div>
@@ -49,24 +47,24 @@
 						</div>
 		                <div class="col-md-12">
 		                	<div class="widget-body">
-								<div class="checkbox">  
+								<div class="checkbox">
 					                <input id="fr" type="checkbox" data-ng-model='sub_modes_2.full_ring'>
 					                <label for="fr">Full Ring</label>
-					                <!--span>[12]</span--> 
+					                <!--span>[12]</span-->
 					            </div>
-					            <div class="checkbox">  
+					            <div class="checkbox">
 					                <input id="s_max" type="checkbox" data-ng-model='sub_modes_2.six_max'>
 					                <label for="s_max">Six Max</label>
-					                <!--span>[12]</span--> 
+					                <!--span>[12]</span-->
 					            </div>
-					            <div class="checkbox">  
+					            <div class="checkbox">
 					                <input id="hu" type="checkbox" data-ng-model='sub_modes_2.heads_up'>
 					                <label for="hu">Heads Up</label>
-					                <!--span>[12]</span--> 
+					                <!--span>[12]</span-->
 					            </div>
 					        </div>
 	                    </div>
-            			
+
 	            	</div>
 				</div>
 
@@ -79,12 +77,12 @@
 					{% include 'coach_list_block.html' %}
 				</div>
 
-				
-				
+
+
 			</div>
 
 		</div>
-		
+
 	</div>
 	<div class="row row-no-padding" >
 		<img class="banner" src="{% static 'images/card_filter_2.jpg' %}"/>
