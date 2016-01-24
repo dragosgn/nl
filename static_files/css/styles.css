@@ -845,7 +845,7 @@ textarea {
 
 .owl-theme.nav-inside .owl-controls .owl-nav div:hover {
 	opacity:1;
-	background-color:#E41E26;
+	background-color:#95865E;
 }
 
 .owl-theme.nav-inside .owl-controls .owl-nav div.owl-prev {
@@ -881,7 +881,7 @@ body.page-boxed .owl-theme.nav-inside .owl-controls .owl-nav div.owl-next {
 }
 
 .owl-theme .owl-controls .owl-dot.active {
-	background-color:#E41E26;
+	background-color:#95865E;
 }
 
 .owl-theme.nav-inside .owl-controls .owl-dots {
@@ -3709,9 +3709,9 @@ footer.navbar a:hover {
 	font-size:20px;
 	transition:all 0.3s ease-in;
 }
-
+.services .service:hover i,
 .services .service:hover h3 {
-	color:#E41E26;
+	color:#95865E;
 }
 
 .services .service p {
@@ -5836,11 +5836,23 @@ header.navbar-transparent.navbar-offset {
 
 .btn-block{
 	background-color: #373737;
-	border-color: #373737; 
+	border-color: #373737;
 }
 
 .btn-block:hover{
 	background-color: #E41E26;
-	border-color: #E41E26; 
+	border-color: #E41E26;
 }
 
+/* Home hover colors for slider, categories and dropdownmenu*/
+.color {
+	color:#95865E;
+}
+
+header.navbar-transparent .navbar-brand span,
+header.navbar-transparent .navbar-brand:hover {
+	color:#95865E;
+}
+header.navbar-transparent .navbar-nav > li > a:hover {
+	color:#95865E;
+}
